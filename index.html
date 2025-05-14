@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Filip Martinsson AB</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    }
+    
+    :root {
+      --primary-color: #2D3436;
+      --accent-color: #0984E3;
+      --bg-color: #FFFFFF;
+      --text-color: #2D3436;
+      --section-bg: #F8F9FA;
+    }
+    
+    body {
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      line-height: 1.7;
+    }
+    
+    header, section {
+      padding: 80px 20px;
+      max-width: 800px;
+      margin: auto;
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeIn 0.6s ease-out forwards;
+    }
+    
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    
+    header {
+      text-align: center;
+      padding-top: 120px;
+    }
+    
+    h1 {
+      font-size: 3.5rem;
+      margin-bottom: 20px;
+      background: linear-gradient(120deg, var(--primary-color), var(--accent-color));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      letter-spacing: -1px;
+    }
+    
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 30px;
+      color: var(--primary-color);
+    }
+    
+    section {
+      border-radius: 20px;
+      margin-bottom: 40px;
+      transition: transform 0.3s ease;
+    }
+    
+    section:nth-child(even) {
+      background-color: var(--section-bg);
+    }
+    
+    section:hover {
+      transform: translateY(-5px);
+    }
+    
+    ul {
+      list-style-type: none;
+      padding-left: 0;
+    }
+    
+    ul li {
+      margin-bottom: 15px;
+      padding-left: 25px;
+      position: relative;
+    }
+    
+    ul li:before {
+      content: "→";
+      position: absolute;
+      left: 0;
+      color: var(--accent-color);
+    }
+    
+    .contact a {
+      color: var(--accent-color);
+      text-decoration: none;
+      position: relative;
+      transition: color 0.3s ease;
+    }
+    
+    .contact a:after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      bottom: -2px;
+      left: 0;
+      background-color: var(--accent-color);
+      transform: scaleX(0);
+      transition: transform 0.3s ease;
+    }
+    
+    .contact a:hover:after {
+      transform: scaleX(1);
+    }
+    
+    footer {
+      text-align: center;
+      font-size: 0.9rem;
+      padding: 40px 20px;
+      color: #777;
+      margin-top: 60px;
+    }
+    
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 2.5rem;
+      }
+      
+      h2 {
+        font-size: 1.8rem;
+      }
+      
+      header, section {
+        padding: 60px 20px;
+      }
+    }
+  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <h1>Filip Martinsson</h1>
+    <p>Product Leadership • Web Development • Digital Marketing</p>
+  </header>
+
+  <section>
+    <h2>Services</h2>
+    <ul>
+      <li>Product leadership and strategic direction</li>
+      <li>Custom web development and digital solutions</li>
+      <li>Marketing strategies tailored for tech businesses</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>About</h2>
+    <p>
+      I'm a entrepreneur in the tech field, now offering consulting services within digital growth and development. My work bridges hands-on technical execution with product strategy,
+      helping startups and established companies move faster with clarity.
+    </p>
+  </section>
+
+  <section class="contact">
+    <h2>Contact</h2>
+    <p>Filip Martinsson</p>
+    <p>Email: <a href="mailto:hello@filipmartinsson.com">hello@filipmartinsson.com</a></p>
+  </section>
+
+  <footer>
+    &copy; 2025 Filip Martinsson AB. All rights reserved.
+  </footer>
+</body>
+</html>
